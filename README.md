@@ -35,6 +35,16 @@ The barrier for solving the second version of the environment is slightly differ
 
 The environment is considered solved, when the average (over 100 episodes) of those average scores is at least +30. 
 
+## Future Improvements
+
+**Experiment with different algorithms** &mdash; Tuning the DDPG algorithm required a lot of trial and error. Perhaps another algorithm such as:
+
+-  [Trust Region Policy Optimization (TRPO)](https://arxiv.org/abs/1502.05477), 
+-  [Proximal Policy Optimization (PPO)](Proximal Policy Optimization Algorithms), 
+-  [Distributed Distributional Deterministic Policy Gradients (D4PG)](https://arxiv.org/abs/1804.08617) 
+would be more great rather than Deep Deterministic Policy Gradient.
+
+
 ### Getting Started
 
 1. Download the environment from one of the links below.  You need only select the environment that matches your operating system:
