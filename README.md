@@ -23,6 +23,20 @@ In this project, will provide two separate versions of the Unity environment:
 - The first version contains a single agent (Single arm). 
 - The second version contains 20 identical agents (20 arms), each with its own copy of the environment. 
 
+### Summary of Environment (Copied)
+- Set-up: Double-jointed arm which can move to target locations.
+- Goal: Each agent must move its hand to the goal location, and keep it there.
+- Agents: The environment contains 20 agents linked to a single Brain.
+- Agent Reward Function (independent):
+  - +0.1 for each timestep agent's hand is in goal location.
+- Brains: One Brain with the following observation/action space.
+  - Vector Observation space: 33 variables corresponding to position, rotation, velocity, and angular velocities of the two arm Rigidbodies.
+  - Vector Action space: (Continuous) Each action is a vector with four numbers, corresponding to torque applicable to two joints. Every entry in the action vector should be a number between -1 and 1.
+  - Visual Observations: None.
+- Reset Parameters: Two, corresponding to goal size, and goal movement speed.
+- Benchmark Mean Reward: 30
+
+
 ### Goal
 
 I solved the secound version by using Deep Deterministic Policy Gradient [DDPG](https://openreview.net/pdf?id=SyZipzbCb), because the second version is useful for algorithms that use multiple (non-interacting, parallel) copies of the same agent to distribute the task of gathering experience.
